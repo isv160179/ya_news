@@ -72,3 +72,10 @@ def news_detail_url_with_comments(news, author):
         comment.created = now + timedelta(days=index)
         comment.save()
     return detail_url
+
+
+@pytest.fixture
+def form_data():
+    return {
+        'text': 'Новый текст',
+    }
