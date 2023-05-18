@@ -41,8 +41,8 @@ def test_comments_order(client, news_detail_url_with_comments):
 @pytest.mark.parametrize(
     'parametrized_client, exam',
     (
-            (pytest.lazy_fixture('client'), False),
-            (pytest.lazy_fixture('admin_client'), True)
+        (pytest.lazy_fixture('client'), False),
+        (pytest.lazy_fixture('admin_client'), True)
     ),
 )
 def test_comment_form_availability_for_different_users(
